@@ -1,10 +1,23 @@
-/* General styles */
+:root {
+    --clr-main: #b1664f;
+    --clr-btn: #f0a500;
+}
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     overflow: auto;
+    font-family: 'Poppins', sans-serif;
 }
+
+h2{
+  font-size: 2.8rem !important;
+  font-weight: 800;
+}
+p{
+  font-size: 1.2rem !important;
+  font-weight: 500;
+}
+
 
 body::-webkit-scrollbar {
     display: none; /* Esto oculta las barras de desplazamiento en Chrome, Safari y otros navegadores basados en Webkit */
@@ -15,8 +28,6 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: #b87966;
-    color: #fff;
     height: 70px;
 }
 
@@ -34,12 +45,12 @@ body::-webkit-scrollbar {
 
 .navigation a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     font-size: 16px;
 }
 
 .navigation a:hover {
-    color: #f0a500;
+    color: var(--clr-btn);
 }
 
 .reserve-button button {
@@ -54,7 +65,7 @@ body::-webkit-scrollbar {
 }
 
 .reserve-button button:hover {
-    background-color: #d18b00;
+    background-color: var(--clr-btn);
 }
 
 .hero {
@@ -73,7 +84,9 @@ body::-webkit-scrollbar {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-}
+    border-bottom-right-radius: 7rem;
+    border-bottom-left-radius: 7rem;
+  }
 
 /* Capa de opacidad sobre el video */
 .hero::before {
@@ -99,6 +112,7 @@ body::-webkit-scrollbar {
     height: 100%;
     padding: 20px;
     z-index: 1; /* Asegura que el contenido esté sobre el video */
+    
 }
 
 .hero-content {
@@ -138,9 +152,86 @@ body::-webkit-scrollbar {
     background-color: #d18b00;
 }
 
+
+
+
+
+
+/* ESPACIO DE NOMBRE DE LA EMPRESA */
+
+.container-our{
+  padding: 10rem 25rem 10rem 25rem;
+}
+
+.our{
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;
+}
+
+.our p{
+  max-width: 50%;
+}
+
+
+/* ESPACIO DE EL POR QUE NOSOTROS */
+
+.why-us{
+  padding: 0rem 25rem 10rem 25rem;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-us{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden; 
+}
+
+.content-us{
+  max-width: 60%;
+}
+
+.container-us.left {
+  height: auto;
+}
+.container-us.left h2{
+  text-align: right;
+}
+.container-us.left p{
+  text-align: right;
+  padding-left: 8rem;
+}
+
+.container-us.right {
+  flex-direction: row-reverse; 
+  height: auto;
+}
+
+.container-us.right h2, p{
+  text-align: left;
+}
+.container-us.right p{
+  padding-right: 8rem;
+}
+
+
+.image-us {
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+
 /* Contenedor principal que va a contener todos los contenedores alternados */
-.container-list {
-    background-color: #333;
+.container-list{
+    background-color: var(--clr-main);
+    color: white;
     display: flex;
     flex-direction: column;
     padding: 5rem 15rem 5rem 15rem;
@@ -148,7 +239,7 @@ body::-webkit-scrollbar {
   }
   
   /* Estilo para cada contenedor individual */
-  .container {
+  .container-faq {
     display: flex;
     align-items: center;
     padding: 20px;
@@ -156,15 +247,22 @@ body::-webkit-scrollbar {
     overflow: hidden; /* Para evitar que las imágenes se salgan */
   }
   
-  .container.left {
-    background-color: #1f1f1f; /* Color de fondo para el contenedor izquierdo */
+  .container-faq.left {
+    background-color: #1f1f1f; 
     height: auto;
   }
+  .container-faq.left h2, p{
+    text-align: right;
+  }
   
-  .container.right {
-    background-color: #292929; /* Color de fondo para el contenedor derecho */
-    flex-direction: row-reverse; /* Invierte el orden de los elementos en este contenedor */
+  .container-faq.right {
+    background-color: #292929;
+    flex-direction: row-reverse; 
     height: auto;
+  }
+
+  .container-faq.right h2, p{
+    text-align: left;
   }
   
   .image {
@@ -175,7 +273,7 @@ body::-webkit-scrollbar {
   }
   
   .content {
-    width: 60%; /* El contenido ocupará el 60% restante */
+    width: 60%; 
     padding-left: 20px;
   }
   
@@ -193,46 +291,3 @@ body::-webkit-scrollbar {
 
 
 
-
-
-.faq-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.faq-item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    color: #fff;
-}
-
-.faq-item img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
-
-}
-
-.faq-item:nth-child(odd) {
-    background-color: #000;
-}
-
-.faq-item:nth-child(even) {
-    background-color: #333;
-}
-
-.faq-content {
-    flex: 1;
-}
-
-.faq-content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.faq-content p {
-    font-size: 1.2rem;
-}
