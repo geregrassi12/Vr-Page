@@ -1,6 +1,7 @@
 :root {
-    --clr-main: #b1664f;
-    --clr-btn: #f0a500;
+    --clr-main: #efefef;
+    --clr-btn: #ff6600;
+    --clr-btn-hover: #e65c00;
 }
 
 body {
@@ -20,7 +21,7 @@ p{
 
 
 body::-webkit-scrollbar {
-    display: none; /* Esto oculta las barras de desplazamiento en Chrome, Safari y otros navegadores basados en Webkit */
+    display: none; 
   }
 
 .container {
@@ -50,11 +51,11 @@ body::-webkit-scrollbar {
 }
 
 .navigation a:hover {
-    color: var(--clr-btn);
+    color: var(--clr-btn-hover);
 }
 
 .reserve-button button {
-    background-color: #f0a500;
+    background-color: var(--clr-btn);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -65,7 +66,7 @@ body::-webkit-scrollbar {
 }
 
 .reserve-button button:hover {
-    background-color: var(--clr-btn);
+    background-color: var(--clr-btn-hover);
 }
 
 .hero {
@@ -138,7 +139,7 @@ body::-webkit-scrollbar {
 }
 
 .hero-content button {
-    background-color: #f0a500;
+    background-color: var(--clr-btn);
     border: none;
     padding: 15px 30px;
     font-size: 1.2rem;
@@ -149,7 +150,7 @@ body::-webkit-scrollbar {
 }
 
 .hero-content button:hover {
-    background-color: #d18b00;
+    background-color: var(--clr-btn-hover);
 }
 
 
@@ -235,12 +236,15 @@ body::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  background-color: #f0a500;
+  height: auto;
+  background-color: white;
 }
 
-.titulo-game{
-  padding: 0 25rem 0 25rem;
+.titulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
 }
 
 .game{
@@ -248,8 +252,9 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #b1664f;
+  background-color: #e7e7e7;
   border-radius: 3rem;
+  margin-bottom: 15rem;
 }
 
 .game-container{
@@ -262,9 +267,19 @@ body::-webkit-scrollbar {
 }
 
 .btn{
-  border-radius: 2rem;
+  border-radius: 12px;
   width: 14rem;
   height: 4rem;
+  background-color: var(--clr-btn);
+  color: white;
+  border: 0;
+  font-size: medium;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--clr-btn-hover);
 }
 
 .image-game{
@@ -277,9 +292,78 @@ body::-webkit-scrollbar {
 }
 
 
+
+/* PRECIOS Y PAQUETES */
+
+
+.paquetes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.paquete {
+  background-color: var(--clr-main);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-bottom: 15rem;
+}
+
+.paquete:hover {
+  transform: translateY(-5px);
+}
+
+h3 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 32px;
+  color: #666;
+}
+
+.precio {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #333;
+}
+
+.boton {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 15px 22px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.boton:hover {
+  background: #e65c00;
+}
+
+
+
+
 /* Contenedor principal que va a contener todos los contenedores alternados */
 .container-list{
-    background-color: var(--clr-main);
+    background-color: #ff6600;
     color: white;
     display: flex;
     flex-direction: column;
@@ -291,6 +375,7 @@ body::-webkit-scrollbar {
   .container-faq {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Espaciado correcto */
     padding: 20px;
     border-radius: 10px;
     overflow: hidden; /* Para evitar que las imágenes se salgan */
@@ -300,7 +385,7 @@ body::-webkit-scrollbar {
     background-color: #1f1f1f; 
     height: auto;
   }
-  .container-faq.left h2, p{
+  .container-faq.left h2,.container-faq.left p{
     text-align: right;
   }
   
@@ -310,7 +395,7 @@ body::-webkit-scrollbar {
     height: auto;
   }
 
-  .container-faq.right h2, p{
+  .container-faq.right h2,.container-faq.right p{
     text-align: left;
   }
   
@@ -335,6 +420,16 @@ body::-webkit-scrollbar {
     margin: 10px 0 0;
   }
   
+
+
+
+
+  /* FOOTER */
+
+
+  footer{
+    background-color: #1f1f1f;
+  }
 
 
 
