@@ -24,35 +24,191 @@ body::-webkit-scrollbar {
     display: none; 
   }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    height: 70px;
+.header {
+  background-color: white;
+  height: 120px;
+  padding: 0 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.logo img {
-    height: 50px;
+.header-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
 }
 
-.navigation ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
+.logo {
+  height: 32px;
+  margin-right  : 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-.navigation a {
-    text-decoration: none;
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.brand {
+  color: black;
+  font-weight: 700;
+  font-size: 18px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.brand:hover {
+  opacity: 0.8;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 32px;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-menu a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  font-size: 15px;
+  padding: 0 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* <- esto alinea la línea con el borde inferior del header */
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  transform: scaleX(1);
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.social-icons a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.social-icons a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover::after {
+  transform: scaleX(1);
+}
+
+.social-icons img {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.2s;
+  display: block;
+}
+
+.lenguages{
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+
+.lang-button {
+  background-color: transparent;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hamburguesa */
+.burger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
     color: black;
-    font-size: 16px;
-}
+    margin-left: auto;
+  }
 
-.navigation a:hover {
-    color: var(--clr-btn-hover);
-}
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #0F1126;
+    padding: 20px;
+    z-index: 1000;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .mobile-menu.show {
+    display: flex;
+  }
+  
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .mobile-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10px;
+  }
+  
+  .mobile-socials img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
 
 .reserve-button button {
     background-color: var(--clr-btn);
@@ -430,6 +586,42 @@ ul li {
   footer{
     background-color: #1f1f1f;
   }
+
+
+
+/* MEDIA QUERY */
+
+
+@media screen and (max-width: 768px) {
+
+  /* HEADER */
+
+  .hero-logo {
+    top: 1px;
+    max-width: 230px;
+  }
+
+  .nav-menu {
+    display: none !important;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    z-index: 1100;
+  }
+
+  /* HERO */
+  .hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
 
 
 

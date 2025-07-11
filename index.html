@@ -10,23 +10,37 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="navigation">
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-            <div class="logo">
-                <img src="logo.png" alt="Logo">
-            </div>
-            <div class="reserve-button">
-                <button>Reservar</button>
-            </div>
-        </div>
-    </header>
+    <header class="header">
+    <div class="header-left">
+      <img src="Assets/img/Logos/manguitastudio_logo2.png" alt="Manguita Logo" class="logo">
+      <span class="brand">Experiencia VR</span>
+    </div>
+    <div class="burger" id="burger">☰</div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="mobile-nav">
+        <a href="#">VR</a>
+        <a href="#">Klee Games</a>
+        <a href="#" data-section="header" data-value="other-games">Otros Juegos</a>
+      </nav>
+      <div class="mobile-socials">
+        <a href="https://www.instagram.com/manguitastudio/" target="_blank"><img src="Assets/icons/instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@manguitastudio" target="_blank"><img src="Assets/icons/tik-tok.png" alt="TikTok"></a>
+        <a href="https://facebook.com" target="_blank"><img src="Assets/icons/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+
+    <div class="social-icons">
+      <nav class="nav-menu">
+        <a href="pages/vr-page.html">VR</a>
+        <a href="#klee">Klee Games</a>
+        <a href="#other-games" data-section="header" data-value="other-games">Otros Juegos</a>
+      </nav>
+      <a href="https://www.instagram.com/manguitastudio/" target="_blank"><img src="Assets/icons/instagram.png" alt="Instagram"></a>
+      <a href="https://www.tiktok.com/@manguitastudio" target="_blank"><img src="Assets/icons/tik-tok.png" alt="TikTok"></a>
+      <a href="https://facebook.com" target="_blank"><img src="Assets/icons/facebook.png" alt="Facebook"></a>
+    </div>
+  </header>
     <section class="hero">
         <video autoplay muted loop>
             <source src="./videos/Escape Simulator - Release Date Announcement Trailer.mp4" type="video/mp4">
