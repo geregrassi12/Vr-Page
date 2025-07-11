@@ -1,0 +1,135 @@
+.vr-hero {
+    width: 100%;
+    height: 400px;
+    background: url('../Assets/img/Backgrounds/vrbg.png') center center / cover no-repeat;
+  }
+
+.servicio-vr-casamiento {
+  padding: 5rem 10%;
+  background: #fefefe;
+  color: #222;
+  
+}
+
+
+.texto-derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;     /* Alinea todos los elementos hijos hacia la derecha */
+}
+
+.texto-derecha > * {
+  text-align: right;         /* Asegura que incluso los párrafos se alineen a la derecha */
+}
+
+.bloque {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+}
+
+.bloque:nth-child(even) {
+  flex-direction: row-reverse;
+  background: #f8f4f0;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.texto {
+  max-width: 50%;
+}
+
+.texto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.texto h3 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.texto p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.boton {
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  background: #d6367a;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.imagen img {
+  width: 280px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+.reserva-vr {
+  background: linear-gradient(135deg, #eef1f5, #ffffff);
+  padding: 5rem 2rem;
+  text-align: center;
+  border-top: 2px solid #e2e2e2;
+}
+
+.contenedor-reserva {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reserva-vr h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.reserva-vr p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.botones-reserva {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.boton-reserva {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.boton-reserva.whatsapp {
+  background-color: #25D366;
+  color: white;
+}
+
+.boton-reserva.whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+.boton-reserva.gmail {
+  background-color: #d44638;
+  color: white;
+}
+
+.boton-reserva.gmail:hover {
+  background-color: #b23329;
+}

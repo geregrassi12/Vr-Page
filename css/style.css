@@ -19,6 +19,11 @@ p{
   font-weight: 500;
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
 
 body::-webkit-scrollbar {
     display: none; 
@@ -75,7 +80,7 @@ body::-webkit-scrollbar {
 }
 
 .nav-menu a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: 500;
   position: relative;
@@ -93,7 +98,7 @@ body::-webkit-scrollbar {
   left: 0;
   height: 2px;
   width: 100%;
-  background-color: black;
+  background-color: white;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -109,6 +114,8 @@ body::-webkit-scrollbar {
   height: 100%;
   align-items: center;
   position: relative;
+  filter: brightness(1) invert(1);
+
 }
 
 .social-icons a {
@@ -126,7 +133,7 @@ body::-webkit-scrollbar {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: white;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -317,7 +324,7 @@ body::-webkit-scrollbar {
 /* ESPACIO DE NOMBRE DE LA EMPRESA */
 
 .container-our{
-  padding: 10rem 25rem 10rem 25rem;
+  padding: 10rem 15rem 10rem 15rem;
 }
 
 .our{
@@ -334,7 +341,7 @@ body::-webkit-scrollbar {
 /* ESPACIO DE EL POR QUE NOSOTROS */
 
 .why-us{
-  padding: 0rem 25rem 10rem 25rem;
+  padding: 0rem 15rem 10rem 15rem;
   color: black;
   display: flex;
   flex-direction: column;
@@ -385,7 +392,7 @@ body::-webkit-scrollbar {
 }
 
 
-/* LOS JUEGOS  */
+/* LOS JUEGOS 
 
 .our-games{
   display: flex;
@@ -445,73 +452,189 @@ body::-webkit-scrollbar {
   background-position: center;
   margin: 2rem 0rem 2rem 2rem;
   border-radius: 3rem;
-}
+} */
 
+/* SERVICIO A OFRECER  */
 
-
-/* PRECIOS Y PAQUETES */
-
-
-.paquetes {
+.service{
+  padding: 0rem 10rem 10rem 10rem;
+  color: black;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
+  flex-direction: column;
 }
 
-.paquete {
-  background-color: var(--clr-main);
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 280px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  margin-bottom: 15rem;
-}
-
-.paquete:hover {
-  transform: translateY(-5px);
-}
-
-h3 {
-  font-size: 40px;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0;
-}
-
-ul li {
-  margin: 10px 0;
-  font-size: 32px;
-  color: #666;
-}
-
-.precio {
-  font-size: 36px;
+.titulo-casamiento {
+  font-size: 3rem !important;
   font-weight: bold;
-  margin: 20px 0;
-  color: #333;
+  margin-bottom: 1rem;
+  text-align: end;  
+  color: black;
 }
 
-.boton {
+
+.titulo-vr {
+  font-size: 3rem !important;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: black;
+}
+
+.container-sr{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden; 
+}
+
+.boton-sr {
   background: #ff6600;
   color: white;
   border: none;
-  padding: 15px 22px;
+  padding: 15px 40px;
   border-radius: 8px;
   font-size: 20px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
-.boton:hover {
-  background: #e65c00;
+.content-sr{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  max-width: 60%;
+  gap: 1rem;
+}
+
+.container-sr.left {
+  height: auto;
+}
+.container-sr.left h2{
+  text-align: right;
+}
+.container-sr.left p{
+  text-align: right;
+  padding-left: 8rem;
+}
+
+.container-sr.right {
+  flex-direction: row-reverse; 
+  height: auto;
+}
+
+
+.container-sr.right .content-sr {
+  align-items: flex-start;
+  text-align: left;
+}
+
+
+.container-sr.right h2, p{
+  text-align: left;
+}
+
+.container-sr.right p{
+  padding-right: 8rem;
+}
+
+
+
+
+
+.image-sr {
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* PRECIOS Y PAQUETES */
+
+.titulo {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 3rem;
+}
+
+.paquetes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+
+.box-vr {
+  width: 300px;
+  background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 20px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box-vr:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+
+.tiempo-vr {
+  font-size: 30px;
+  font-weight: bold;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.jugadores {
+  font-size: 20px;
+  color: #0066cc;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.gafas {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.datos{
+  font-size: 20px ;
+}
+
+.precio-vr {
+  font-size: 25px !important;
+  color: #ff3300;
+  font-weight: 700;
+}
+
+.boton-vr {
+  background-color: #ff6600;
+  color: white;
+  padding: 12px 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(255, 102, 0, 0.3);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.precio-boton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.precio-boton .precio-vr {
+  margin: 0;
 }
 
 
@@ -583,11 +706,63 @@ ul li {
   /* FOOTER */
 
 
-  footer{
-    background-color: #1f1f1f;
+.footer {
+    background: linear-gradient(to bottom, #025373, #000000);
+    padding: 20px;
+    color: #ffffff;
+    font-family: 'Rubik', sans-serif;
   }
-
-
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo {
+    height: 60px;
+    margin-bottom: 5px;
+  }
+  
+  .footer-left {
+    max-width: 60%;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-right a {
+    margin-left: 15px;
+  }
+  
+  .footer-right img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s;
+  }
+  
+  .footer-right img:hover {
+    transform: scale(1.1);
+  }
 
 /* MEDIA QUERY */
 
