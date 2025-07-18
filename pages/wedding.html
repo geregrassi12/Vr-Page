@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VR para Casamientos | Experiencia VR en tu Boda | Manguita Studio</title>
@@ -61,7 +63,7 @@
       <p>Ofrecemos alquiler de cascos Meta con experiencias únicas de realidad virtual diseñadas especialmente para celebraciones de casamiento. Desde juegos de escape cooperativos hasta desafíos personalizados para novios e invitados.</p>
     </div>
     <div class="imagen">
-      <img src="Assets/img/vr-casamiento1.png" alt="Novia con casco VR y controles">
+      <img src="../Assets/img/Games/experienvr-character-05.png" alt="Novia con casco VR y controles">
     </div>
   </div>
 </section>
@@ -69,7 +71,7 @@
 <section class="servicio-vr-casamiento">
   <div class="bloque">
     <div class="imagen">
-      <img src="Assets/img/vr-casamiento2.png" alt="Pareja divertida con VR en casamiento">
+      <img src="../Assets/img/Games/experienvr-character-06.png" alt="Pareja divertida con VR en casamiento">
     </div>
     <div class="texto texto-derecha">
       <h2>Juegos Exclusivos y<br>Ambientación Romántica</h2>
@@ -108,6 +110,38 @@
           </div>
         </div>
       </footer>
+
+
+<script type="module">
+	  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+	webhookUrl: 'http://n8n.v2t.com.ar:4545/webhook/cd122eae-7b67-4cf7-8e38-5315744b51a7/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	loadPreviousSession: true,
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'es',
+	initialMessages: [],
+	i18n: {
+		es: {
+			title: 'Como estas? 👋',
+			subtitle: "Comienza un nuevo chat. Estoy aqui para ayudarte 24/7.",
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: 'Type your question..',
+		},
+	},
+});
+
+</script>
 
   </body>
   </html>

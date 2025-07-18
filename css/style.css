@@ -399,8 +399,8 @@ body::-webkit-scrollbar {
 
 
 .image-us {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   background-size: cover;
   background-position: center;
 }
