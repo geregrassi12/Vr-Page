@@ -8,7 +8,9 @@
         </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/burguer-header.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <title>Experiencia VR | Escape Room Virtual para Eventos, Casamientos y Empresas</title>
     <link rel="icon" href="/Assets/icons/Logo-web.png" type="image/png">
     <meta name="description" content="Alquila nuestros cascos Meta y disfruta juegos de escape room VR donde quieras. Ideal para eventos, casamientos y equipos de trabajo. Experiencias únicas y personalizadas en Barcelona.">
@@ -59,9 +61,9 @@
 
 
     <section class="hero">
-        <video autoplay muted loop>
+        <!-- <video autoplay muted loop>
             <source src="./videos/Escape Simulator - Release Date Announcement Trailer.mp4" type="video/mp4">
-        </video>
+        </video> -->
         <div class="hero-content">
             <h1>Vive la Experiencia VR</h1>
             <p>Alquila nuestros cascos Meta y disfruta de juegos de escape room exclusivos donde quieras.</p>
@@ -121,15 +123,6 @@
     </section> -->
 
 <section id="events" class="service">
-        <h1 class="titulo-casamiento">💐Ideal para casamientos</h1>
-        <div class="container-sr left">
-            <div class="image-sr" style="background-image: url('Assets/img/Games/experienvr-character-04.png');"></div>
-            <div class="content-sr">
-              <h2>¿Where is my ring?</h2>
-              <p>Un divertido juego inmersivo para conocer a la pareja de casado, sumergete en la previa a la boda como el novio en la busqueda desesperada del anillo de casamiento, y rapido!! que sino no llegas a la boda. </p>
-              <button class="boton-sr"><a href="./pages/wedding.html">Conoce más</a></button>
-            </div>
-          </div>
 
           <h1 class="titulo-vr">Tambien para equipos de trabajo!🧑‍💼</h1>
           <div class="container-sr right">
@@ -139,6 +132,16 @@
               <p>Impulsa la dinámica de tu equipo con una experiencia inmersiva y divertida. Nuestros juegos de realidad virtual fortalecen la comunicación, el ingenio y la colaboración a través de desafíos contrarreloj.
               Ideal para empresas, grupos de trabajo, familias o para destacar tu marca en cualquier evento.</p>
               <button class="boton-sr">Conocé más!</button>
+            </div>
+          </div>
+
+          <h1 class="titulo-casamiento">💐Ideal para casamientos</h1>
+        <div class="container-sr left">
+            <div class="image-sr" style="background-image: url('Assets/img/Games/experienvr-character-04.png');"></div>
+            <div class="content-sr">
+              <h2>¿Where is my ring?</h2>
+              <p>Un divertido juego inmersivo para conocer a la pareja de casado, sumergete en la previa a la boda como el novio en la busqueda desesperada del anillo de casamiento, y rapido!! que sino no llegas a la boda. </p>
+              <button class="boton-sr"><a href="./pages/wedding.html">Conoce más</a></button>
             </div>
           </div>
 
@@ -306,7 +309,14 @@
 
 <div id="n8n-chat"></div>
 
+<script>
+  const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobile-menu');
 
-  
+burger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('show');
+});
+</script>
+
 </body>
 </html>
