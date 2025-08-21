@@ -111,6 +111,16 @@ header.header {
     margin-bottom: 20px;
   }
 
+  .chips {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .chip {
+      padding: .225rem .7rem;
+  }
+
   .hero-content button {
     font-size: 1rem;
     padding: 12px 24px;

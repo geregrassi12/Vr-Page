@@ -43,6 +43,8 @@
         <a href="https://www.tiktok.com/@experience.vr" target="_blank"><img src="Assets/icons/tik-tok.png" alt="TikTok"></a>
         <a href="https://www.facebook.com/profile.php?id=61577981081023" target="_blank"><img src="Assets/icons/facebook.png" alt="Facebook"></a>
       </div>
+            <button class="button-header"><a href="#q&a">Contactate</a></button>
+
     </div>
 
     <div class="social-icons">
@@ -56,7 +58,7 @@
         <a href="https://www.tiktok.com/@experience.vr" target="_blank"><img src="Assets/icons/tik-tok.png" alt="TikTok"></a>
         <a href="https://www.facebook.com/profile.php?id=61577981081023" target="_blank"><img src="Assets/icons/facebook.png" alt="Facebook"></a>
       </nav>
-      <button class="button-header"><a href="#reserva">Contactate</a></button>
+      <button class="button-header"><a href="#q&a">Contactate</a></button>
       </div>
   </header>
 
@@ -127,7 +129,7 @@
               <p>Sumá una experiencia VR inolvidable a tu activación de marca.
                  Con juegos originales, inmersivos y personalizables, tu público vivirá algo distinto, divertido y memorable.
                  Ideal para sorprender, atraer y conectar con tu audiencia en pocos minutos.</p>
-              <button class="boton-sr"><a href="#">Conoce más</a></button>
+              <button class="boton-sr"><a href="/pages/events.html">Conoce más</a></button>
             </div>
           </div>
 
@@ -138,7 +140,7 @@
               <h2>Mejora la dinamica en tu equipo!</h2>
               <p>Impulsa la dinámica de tu equipo con una experiencia inmersiva y divertida. Nuestros juegos de realidad virtual fortalecen la comunicación, el ingenio y la colaboración a través de desafíos contrarreloj.
               Ideal para empresas, grupos de trabajo, familias o para destacar tu marca en cualquier evento.</p>
-              <button class="boton-sr">Conocé más!</button>
+              <button class="boton-sr"><a href="./pages/companys.html">Conoce más</a></button>
             </div>
           </div>
 
@@ -226,41 +228,78 @@
 
 
     <section id="q&a" class="container-list">
-        <h1>Preguntas frecuentes</h1>
-        <div class="container-faq left">
-          <div class="image" style="background-image: url('./Assets/img/Games/q&a-01.png');"></div>
-          <div class="content">
-            <h2>¿Qué incluye el servicio?</h2>
-            <p>Llevamos cascos VR Meta y acceso a nuestros juegos exclusivos. Nos encargamos de la instalación y asistencia durante todo el evento</p>
-          </div>
-        </div>
-      
-        <div class="container-faq right">
-          <div class="image" style="background-image: url('./Assets/img/Games/q&a-02.png');"></div>
-          <div class="content">
-            <h2>¿Dónde puedo usar la experiencia VR?</h2>
-            <p>En cualquier espacio con algo de lugar libre: casas, oficinas o salones de eventos</p>
-          </div>
-        </div>
+      <section id="contacto" class="section-contact-faq reveal">
+  <div class="cf-grid container">
+    <!-- FORMULARIO -->
+    <form class="card cf-form" > 
+      <!-- action="#" method="post" novalidate -->
+      <h2 class="cf-title">Formulario</h2>
 
-        <div class="container-faq left">
-          <div class="image" style="background-image: url('./Assets/img/Games/q&a-01.png');"></div>
-          <div class="content">
-            <h2>¿Cuántas personas pueden participar?</h2>
-            <p>De 1 a 4 personas juegan al mismo tiempo, pero pueden rotar para que todos disfruten la experiencia.</p>
-          </div>
+      <div class="field">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Su nombre" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Mail</label>
+        <input id="email" name="email" type="email" placeholder="Su mail" required>
+      </div>
+
+      <div class="field">
+        <label for="asunto">Asunto</label>
+        <input id="asunto" name="asunto" type="text" placeholder="Su asunto">
+      </div>
+
+      <div class="field">
+        <label for="motivo">Motivo</label>
+        <textarea id="motivo" name="motivo" rows="4" placeholder="Su motivo de contacto..."></textarea>
+      </div>
+
+      <!-- honeypot antispam -->
+      <input type="text" name="empresa" tabindex="-1" autocomplete="off" class="hp">
+
+      <button class="btn btn-primary" type="submit">
+        Enviar
+        <span class="btn-spinner" aria-hidden="true"></span>
+      </button>
+    </form>
+
+    <!-- FAQ -->
+    <div class="card cf-faq">
+      <h2 class="cf-title">FAQ</h2>
+
+      <details class="faq-item">
+        <summary>¿Qué incluye el servicio?<span class="chev"></span></summary>
+        <div class="answer">
+          Llevamos cascos VR Meta y acceso a nuestros juegos exclusivos. Nos encargamos de la instalación y asistencia durante todo el evento.
         </div>
-      
-        <div class="container-faq right">
-          <div class="image" style="background-image: url('./Assets/img/Games/q&a-02.png');"></div>
-          <div class="content">
-            <h2>¿Necesito tener experiencia previa en VR o tecnología?</h2>
-            <p>No hace falta, guiamos a cada participante y nos ocupamos de todo el soporte técnico.</p>
-          </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Dónde puedo usar la experiencia VR?<span class="chev"></span></summary>
+        <div class="answer">
+          En cualquier espacio con algo de lugar libre: casas, oficinas o salones de eventos
         </div>
-      
-        <!-- Repite los contenedores según sea necesario -->
-      </section>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Cuántas personas pueden participar?<span class="chev"></span></summary>
+        <div class="answer">
+          De 1 a 4 personas juegan al mismo tiempo, pero pueden rotar para que todos disfruten la experiencia.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Necesito tener experiencia previa en VR o tecnología?<span class="chev"></span></summary>
+        <div class="answer">
+          No hace falta, guiamos a cada participante y nos ocupamos de todo el soporte técnico.
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>  
+    </section>
 
 
 

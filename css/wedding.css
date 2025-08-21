@@ -5,10 +5,9 @@
   }
 
 .servicio-vr-casamiento {
-  padding: 5rem 10%;
-  background: #fefefe;
-  color: #222;
-  
+  padding: 2rem 10%;
+  background: var(--clr-main);
+  color: var(--clr-general-text);
 }
 
 
@@ -26,45 +25,51 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 6rem;
 }
 
 .bloque:nth-child(even) {
   flex-direction: row-reverse;
-  background: #f8f4f0;
+  background: var(--clr-box);
   padding: 3rem;
   border-radius: 1rem;
 }
 
 .texto {
   max-width: 50%;
+  background-color: var(--clr-box);
+  padding: 20px 40px;
+  border-radius: var(--brd-btn-primary);
 }
 
 .texto h2 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  padding-bottom: 1.6rem;
 }
 
 .texto h3 {
   font-size: 1.5rem;
-  color: #666;
-  margin-bottom: 1.5rem;
+  color: var(--clr-general-text);
+  margin: 0;
+  padding-bottom: 1.6rem;
 }
 
 .texto p {
   font-size: 1.2rem;
   line-height: 1.6;
+  margin: 0;
+  padding-bottom: 1.6rem;
 }
 
 .boton {
-  margin-top: 1.5rem;
   padding: 1rem 2rem;
   background: #d6367a;
-  color: white;
+  color: var(--clr-general-text);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: var(--brd-btn-secondary);
   font-size: 1.1rem;
   cursor: pointer;
+  margin-bottom: 1.6rem;
 }
 
 .imagen img {
@@ -75,10 +80,9 @@
 
 
 .reserva-vr {
-  background: linear-gradient(135deg, #eef1f5, #ffffff);
+  background: var(--clr-box);
   padding: 5rem 2rem;
   text-align: center;
-  border-top: 2px solid #e2e2e2;
 }
 
 .contenedor-reserva {
@@ -89,12 +93,12 @@
 .reserva-vr h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #222;
+  color: var(--clr-general-text);
 }
 
 .reserva-vr p {
   font-size: 1.2rem;
-  color: #444;
+  color: var(--clr-general-text);
   margin-bottom: 2rem;
 }
 
@@ -133,3 +137,14 @@
 .boton-reserva.gmail:hover {
   background-color: #b23329;
 }
+
+
+
+
+
+
+
+
+
+
+
