@@ -1,10 +1,15 @@
 :root {
-    --clr-main: #efefef;
-    --clr-secondary-main: #024b44;
-    --clr-general-text: black;
+    --clr-main: #001119;
+    --clr-secondary-main: #464961;
+    --clr-box: #001a25;
+
+    --clr-general-text: rgb(255, 255, 255);
     --clr-opositive-text: white;
-    --clr-btn: #04D9C4;
-    --clr-btn-hover: #2fb4a7;
+    --clr-neon-text: #40f2fe;
+    --clr-light-neon-text: #a6f9ff;
+
+    --clr-btn: #4dc8d0;
+    --clr-btn-hover: #53b3b9;
 
 
 
@@ -14,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--clr-main);
 }
 
 body {
@@ -35,7 +41,7 @@ p{
 
 a{
   text-decoration: none;
-  color: var(--clr-texts);
+  color: var(--clr-general-text);
 }
 ul,li{
     list-style-type: none;
@@ -120,79 +126,75 @@ body::-webkit-scrollbar {
   opacity: 0.8;
 }
 
+/* ===== Menú (texto e íconos) ===== */
 .nav-menu {
   display: flex;
-  gap: 32px;
-  flex-grow: 1;
-  justify-content: center;
   align-items: center;
   height: 40%;
 }
 
 .nav-menu a {
   position: relative;
-  font-size: 15px;
-  padding: 0 12px;
   display: flex;
   align-items: center;
+  font-weight: bold;
+  padding: 0 12px;
+  text-decoration: none;
+  color: inherit;
 }
 
+/* Subrayado animado (izq -> der en 0.5s) */
 .nav-menu a::after {
   content: "";
   position: absolute;
-  bottom: 0; /* <- esto alinea la línea con el borde inferior del header */
   left: 0;
+  bottom: 0;
   height: 2px;
+  width: 0;
+  background: white;
+  transition: width 0.3s ease;
+}
+.nav-menu a:hover::after { 
   width: 100%;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
-}
+ }
 
-.nav-menu a:hover::after {
-  transform: scaleX(1);
-}
-
+/* ===== Contenedor que agrupa texto + redes ===== */
 .social-icons {
   display: flex;
-  gap: 16px;
-  height: 100%;
   align-items: center;
-  position: relative;
-
+  gap: 16px;              /* separación entre el bloque de texto y el bloque de redes */
 }
 
-.social-icons a {
-  color: #000000;
-  font-weight: bold;
-  position: relative;
-  display: flex;
-  align-items: center;
+/* Primer <nav> (links de texto): separación amplia y centrado */
+.social-icons > .nav-menu:first-child {
+  gap: 32px;
+  flex-grow: 1;
   justify-content: center;
-  height: 100%;
 }
 
-.social-icons a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
-}
+/* Segundo <nav> (redes): íconos a 5px entre sí */
+.social-icons > .nav-menu:last-child { gap: 5px; }
 
-.social-icons a:hover::after {
-  transform: scaleX(1);
-}
-
+/* Íconos (negros y tamaño) */
 .social-icons img {
   width: 22px;
   height: 22px;
-  transition: transform 0.2s;
   display: block;
+  transition: transform 0.2s;
+}
+
+.button-header{
+  background-color: transparent;
+  color: var(--clr-general-text);
+  padding: .7rem;
+  border-radius: var(--brd-btn-primary);
+  border: 1.6px solid #33bfc9;
+  transition: transform 0.5s ease;
+
+}
+.button-header:hover{
+  background-color: rgba(9, 0, 76, 0.378);
+  transform: scale(1.08);
 }
 
 .lenguages{
@@ -349,7 +351,7 @@ body::-webkit-scrollbar {
   font-weight: bold;
   padding: .45rem 1.3rem;
   border-radius: 2rem;
-  border: 1.6px solid #6368c8;
+  border: 1.6px solid #33bfc9;
 }
 
 .hero-content h1 {
@@ -374,7 +376,7 @@ body::-webkit-scrollbar {
 
 .hero-content button:hover {
     background-color: var(--clr-btn-hover);
-    transform:translateY(-2px); box-shadow:0 10px 20px rgba(0,0,0,.0);
+    transform: scale(1.08);
 }
 
 
@@ -397,10 +399,15 @@ body::-webkit-scrollbar {
 }
 
 .our p{
+  background-color: var(--clr-box);
   max-width: 50%;
+  padding: 3rem;
+  border-bottom-right-radius: var(--brd-btn-primary);
+  border-top-right-radius: var(--brd-btn-primary);
 }
 
 .our h2{
+  color: var(--clr-light-neon-text);
   font-size: 2.8rem;
 }
 
@@ -541,7 +548,7 @@ body::-webkit-scrollbar {
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: end;  
-  color: black;
+  color: var(--clr-general-text);
 }
 
 
@@ -550,7 +557,7 @@ body::-webkit-scrollbar {
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: left;
-  color: black;
+  color: var(--clr-general-text);
 }
 
 .container-sr{
@@ -571,10 +578,10 @@ body::-webkit-scrollbar {
   font-size: 20px;
   cursor: pointer;
   transition: background 0.3s;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .boton-sr:hover{
-    transform:translateY(-2px); box-shadow:0 10px 20px rgba(98, 232, 255, 0.32);
+    transform:scale(1.08); box-shadow:0 10px 20px rgba(98, 232, 255, 0.32);
     background-color: var(--clr-btn-hover);
 }
 
