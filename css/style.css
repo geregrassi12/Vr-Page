@@ -2,6 +2,7 @@
     --clr-main: #001119;
     --clr-secondary-main: #464961;
     --clr-box: #001a25;
+    --clr-reserve-box: #022433;
 
     --clr-general-text: rgb(255, 255, 255);
     --clr-opositive-text: white;
@@ -402,8 +403,7 @@ body::-webkit-scrollbar {
   background-color: var(--clr-box);
   max-width: 50%;
   padding: 3rem;
-  border-bottom-right-radius: var(--brd-btn-primary);
-  border-top-right-radius: var(--brd-btn-primary);
+  border-radius: var(--brd-btn-primary);
 }
 
 .our h2{
@@ -420,15 +420,17 @@ body::-webkit-scrollbar {
   padding: 0rem 15rem 10rem 15rem;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 }
 
 .container-us{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 20px 50px;
+  border-radius: var(--brd-btn-primary);
   overflow: hidden; 
+  background-color: var(--clr-box);
 }
 
 .content-us{
@@ -548,7 +550,7 @@ body::-webkit-scrollbar {
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: end;  
-  color: var(--clr-general-text);
+  color: var(--clr-light-neon-text);
 }
 
 
@@ -557,7 +559,7 @@ body::-webkit-scrollbar {
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: left;
-  color: var(--clr-general-text);
+  color: var(--clr-light-neon-text);
 }
 
 .container-sr{
@@ -567,6 +569,7 @@ body::-webkit-scrollbar {
   padding: 20px;
   border-radius: 10px;
   overflow: hidden; 
+  background-color: var(--clr-box);
 }
 
 .boton-sr {
@@ -578,7 +581,7 @@ body::-webkit-scrollbar {
   font-size: 20px;
   cursor: pointer;
   transition: background 0.3s;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 .boton-sr:hover{
     transform:scale(1.08); box-shadow:0 10px 20px rgba(98, 232, 255, 0.32);
@@ -651,6 +654,7 @@ body::-webkit-scrollbar {
   text-align: center;
   font-size: 38px;
   margin-bottom: 3rem;
+  color: var(--clr-light-neon-text);
 }
 
 .paquetes {
@@ -666,37 +670,36 @@ body::-webkit-scrollbar {
 
 .box-vr {
   width: 300px;
-  background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+  background-color: var(--clr-reserve-box);
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   padding: 20px 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .box-vr:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 20px rgba(82, 146, 157, 0.32);
 }
 
 
 .tiempo-vr {
   font-size: 30px;
   font-weight: bold;
-  background: black;
+  background: var(--clr-general-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .jugadores {
   font-size: 20px;
-  color: #0066cc;
+  color: var(--clr-light-neon-text);
   font-weight: 600;
   margin: 10px 0;
 }
 
 .gafas {
   font-size: 16px;
-  color: #333;
+  color: var(--clr-general-text);
   margin-bottom: 15px;
 }
 
@@ -706,7 +709,7 @@ body::-webkit-scrollbar {
 
 .precio-vr {
   font-size: 25px !important;
-  color: #ff3300;
+  color: var(--clr-neon-text);
   font-weight: 700;
 }
 
