@@ -1,7 +1,15 @@
 :root {
     --clr-main: #efefef;
-    --clr-btn: #ff6600;
-    --clr-btn-hover: #e65c00;
+    --clr-secondary-main: #024b44;
+    --clr-general-text: black;
+    --clr-opositive-text: white;
+    --clr-btn: #04D9C4;
+    --clr-btn-hover: #2fb4a7;
+
+
+
+    --brd-btn-primary: 1.1rem;
+    --brd-btn-secondary: .7rem;
 }
 
 html {
@@ -27,7 +35,15 @@ p{
 
 a{
   text-decoration: none;
-  color: white;
+  color: var(--clr-texts);
+}
+ul,li{
+    list-style-type: none;
+
+}
+
+button {
+  font-weight: bold; /* o font-weight: 700; */
 }
 
 
@@ -35,8 +51,36 @@ body::-webkit-scrollbar {
     display: none; 
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header {
-  background-color: white;
+  background-color: var(--clr-main);
+  color: var(--clr-general-text);
   height: 120px;
   padding: 0 120px;
   display: flex;
@@ -65,7 +109,7 @@ body::-webkit-scrollbar {
 }
 
 .brand {
-  color: black;
+  color: var(--clr-general-text);
   font-weight: 700;
   font-size: 18px;
   transition: opacity 0.3s ease;
@@ -82,17 +126,13 @@ body::-webkit-scrollbar {
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 40%;
 }
 
 .nav-menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
   position: relative;
   font-size: 15px;
   padding: 0 12px;
-  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -104,7 +144,6 @@ body::-webkit-scrollbar {
   left: 0;
   height: 2px;
   width: 100%;
-  background-color: white;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -120,11 +159,12 @@ body::-webkit-scrollbar {
   height: 100%;
   align-items: center;
   position: relative;
-  filter: brightness(1) invert(1);
 
 }
 
 .social-icons a {
+  color: #000000;
+  font-weight: bold;
   position: relative;
   display: flex;
   align-items: center;
@@ -139,7 +179,6 @@ body::-webkit-scrollbar {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: white;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -229,7 +268,7 @@ body::-webkit-scrollbar {
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    border-radius: 5px;
+    border-radius: var(--brd-btn-secondary);
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -260,7 +299,11 @@ body::-webkit-scrollbar {
   } */
 
   .hero{
-    background-image: url('../Assets/img/Backgrounds/vrbg.png');
+    background: url('../Assets/img/Backgrounds/vrbg.png') center 65% / cover no-repeat ;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
 /* Capa de opacidad sobre el video */
@@ -272,44 +315,50 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura solo arriba */
+    background-color: rgba(0, 0, 0, 0.35); /* Capa oscura solo arriba */
     z-index: 0;
+
 }
 
-.hero-content {
-    position: relative;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 20px;
-    z-index: 1; /* Asegura que el contenido esté sobre el video */
-    
-}
 
 .hero-content {
-    position: relative;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 20px;
+  width: 600px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-opositive-text);
+  z-index: 1;
+  gap: .8rem;
+}
+
+.chips{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  border: 1rem;
+  padding: 0;
+}
+.chip{
+  background-color: rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+  padding: .45rem 1.3rem;
+  border-radius: 2rem;
+  border: 1.6px solid #6368c8;
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .hero-content p {
     font-size: 1.5rem;
-    margin-bottom: 20px;
 }
 
 .hero-content button {
@@ -318,13 +367,14 @@ body::-webkit-scrollbar {
     padding: 15px 30px;
     font-size: 1.2rem;
     color: #fff;
-    border-radius: 5px;
+    border-radius: var(--brd-btn-primary);
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-content button:hover {
     background-color: var(--clr-btn-hover);
+    transform:translateY(-2px); box-shadow:0 10px 20px rgba(0,0,0,.0);
 }
 
 
@@ -335,6 +385,8 @@ body::-webkit-scrollbar {
 /* ESPACIO DE NOMBRE DE LA EMPRESA */
 
 .container-our{
+  background-color: var(--clr-main);
+  color: var(--clr-general-text);
   padding: 10rem 15rem 10rem 15rem;
 }
 
@@ -356,8 +408,9 @@ body::-webkit-scrollbar {
 /* ESPACIO DE EL POR QUE NOSOTROS */
 
 .why-us{
+  background-color: var(--clr-main);
+  color: var(--clr-general-text);
   padding: 0rem 15rem 10rem 15rem;
-  color: black;
   display: flex;
   flex-direction: column;
 }
@@ -476,8 +529,9 @@ body::-webkit-scrollbar {
 /* SERVICIO A OFRECER  */
 
 .service{
+  background-color: var(--clr-main);
   padding: 0rem 10rem 10rem 10rem;
-  color: black;
+  color: var(--clr-general-text);
   display: flex;
   flex-direction: column;
 }
@@ -509,14 +563,19 @@ body::-webkit-scrollbar {
 }
 
 .boton-sr {
-  background: #ff6600;
-  color: white;
+  background-color: var(--clr-btn);
+  color: var(--clr-opositive-text);
   border: none;
   padding: 15px 40px;
-  border-radius: 8px;
+  border-radius: var(--brd-btn-secondary);
   font-size: 20px;
   cursor: pointer;
   transition: background 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.boton-sr:hover{
+    transform:translateY(-2px); box-shadow:0 10px 20px rgba(98, 232, 255, 0.32);
+    background-color: var(--clr-btn-hover);
 }
 
 .content-sr{
@@ -562,10 +621,6 @@ body::-webkit-scrollbar {
   padding-right: 8rem;
 }
 
-
-
-
-
 .image-sr {
   width: 400px;
   height: 400px;
@@ -573,7 +628,17 @@ body::-webkit-scrollbar {
   background-position: center;
 }
 
+
+
+
 /* PRECIOS Y PAQUETES */
+
+
+.reserva{
+  background-color: var(--clr-main);
+  color: var(--clr-general-text);
+}
+
 
 .titulo {
   text-align: center;
@@ -665,23 +730,22 @@ body::-webkit-scrollbar {
 
 /* Contenedor principal que va a contener todos los contenedores alternados */
 .container-list{
-    background-color: #ff6600;
-    color: white;
+    background-color: var(--clr-secondary-main);
+    color: var(--clr-opositive-text);
     display: flex;
     flex-direction: column;
     padding: 5rem 15rem 5rem 15rem;
     gap: 20px; /* Espacio entre los contenedores */
   }
   
-  /* Estilo para cada contenedor individual */
-  .container-faq {
+.container-faq {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Espaciado correcto */
     padding: 20px;
     border-radius: 10px;
     overflow: hidden; /* Para evitar que las imágenes se salgan */
-  }
+ }
 
   
   .container-faq.left {
